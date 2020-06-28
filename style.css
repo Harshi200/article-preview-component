@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
 
-/* @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;500;700&display=swap"); */
-
 :root {
   --dark-gray-blue: hsl(217, 19%, 35%);
   --desaturated-blue: hsl(214, 17%, 51%);
@@ -25,20 +23,25 @@ html {
 }
 
 body {
-  max-width: 144rem;
+  /* max-width: 144rem; */
   min-height: 100%;
   padding: 0 2.4rem;
   background: var(--light-gray-blue);
   font-family: "Manrope", sans-serif;
 
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
+}
+
+p {
+  /* color: var(--desaturated-blue); */
 }
 
 article {
   max-width: 73rem;
-  /* border-radius: 2.5rem; */
+  border-radius: 1.5rem;
+  overflow: hidden;
 }
 
 figure {
@@ -52,22 +55,29 @@ figure img {
 }
 
 .copy {
-  padding: 4.2rem 3.2rem 2rem;
+  /* padding: 4.2rem 3.2rem 2rem; */
+  /* padding: 3.5rem 3.2rem 2rem; */
   background: #ffff;
+  padding-top: 4.2rem;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  padding-bottom: 2rem;
 }
 
 h2 {
   font-size: 1.6rem;
   line-height: 1.5;
   padding-bottom: 1.3rem;
+  letter-spacing: 0.3px;
   color: var(--dark-gray-blue);
 }
 
-p {
+.copy p {
   font-size: 1.3rem;
   letter-spacing: 0.7px;
   line-height: 1.6;
-  padding-bottom: 2.7rem;
+  /* padding-bottom: 2.7rem; */
+  /* padding-bottom: 2rem; */
   color: var(--desaturated-blue);
 }
 
@@ -75,7 +85,15 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  background: #ffff;
+  padding-top: 1rem;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  padding-bottom: 2rem;
+  background: lightblue;
 }
+
 .author {
   display: flex;
 }
@@ -100,14 +118,39 @@ time {
   color: var(--desaturated-blue);
 }
 
-.share {
+.arrow {
   background: var(--light-gray-blue);
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
 
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: inherit;
+  background: var(--dark-gray-blue);
+  left: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+}
+
+.share p {
+  text-transform: uppercase;
+  color: var(--gray-blue);
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+}
+
+ul {
+  list-style: none;
   display: flex;
 }
 
