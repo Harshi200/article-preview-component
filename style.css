@@ -142,6 +142,10 @@ time {
   background: var(--gray-blue);
 }
 
+.arrow:active {
+  transform: scale(0.98);
+}
+
 .arrow:hover img {
   filter: brightness(100);
   transition: none;
