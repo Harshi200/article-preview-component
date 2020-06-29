@@ -23,7 +23,6 @@ html {
 }
 
 body {
-  /* max-width: 144rem; */
   min-height: 100%;
   padding: 0 2.4rem;
   background: var(--light-gray-blue);
@@ -32,47 +31,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-p {
-  /* color: var(--desaturated-blue); */
+  flex-direction: column;
 }
 
 article {
   border-radius: 1.5rem;
-  overflow: hidden;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
-
-@media screen and (max-width: 767px) {
-  article {
-    width: 32.7rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  article {
-    display: flex;
-    max-width: 73rem;
-    height: 27.7rem;
-  }
-}
-
-/* figure {
-  height: 20rem;
-} */
-
-/* figure img {
-  width: 100%;
-  height: 100%;
-  display: block; */
-
-/* object-fit: cover; */
-/* align-self: stretch; */
-/* } */
 
 figure {
   background: url(/images/drawers.jpg);
   width: 100%;
   background-size: cover;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
 .copy {
@@ -112,7 +85,8 @@ footer {
   padding-left: 3.2rem;
   padding-right: 3.2rem;
   padding-bottom: 2rem;
-  /* background: lightblue; */
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
 }
 
 .author {
@@ -145,17 +119,12 @@ time {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* 
-.arrow:hover {
-  z-index: 10;
-  margin-top: 0.5rem;
-  background: var(--gray-blue);
-} */
 
 .share {
   display: flex;
@@ -168,8 +137,19 @@ time {
   top: 0;
   opacity: 0;
   width: 100%;
-  padding-left: 3.2rem;
-  padding-right: 3.2rem;
+  padding: 0 3.2rem;
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.arrow:hover {
+  z-index: 10;
+  margin-top: 0.5rem;
+  background: var(--gray-blue);
+}
+
+.arrow:hover ~ .share {
+  opacity: 1;
 }
 
 .share p {
@@ -190,24 +170,42 @@ li {
   padding-right: 1.5rem;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 874px) {
   figure {
     height: 20rem;
   }
+  .share {
+    width: 100%;
+  }
+
+  article {
+    width: 32.7rem;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 875px) {
+  article {
+    display: flex;
+    max-width: 73rem;
+    height: 27.7rem;
+  }
+
   figure {
     flex: 1;
+    border-bottom-left-radius: 1.5rem;
+    border-top-right-radius: 0;
   }
 
   section {
     flex: 1.6;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
   }
 
   .copy {
     padding-left: 4.5rem;
     padding-top: 3.2rem;
+    border-top-right-radius: 1.5rem;
   }
 
   h2 {
@@ -219,6 +217,7 @@ li {
     padding-left: 4.5rem;
     padding-top: 0;
     padding-bottom: 3.2rem;
+    border-bottom-left-radius: 0rem;
   }
 
   .arrow {
@@ -228,12 +227,49 @@ li {
   h3 {
     padding-bottom: 0.3rem;
   }
+
+  .share {
+    top: -7.8rem;
+    left: 26.8rem;
+    height: 5.3rem;
+    border-radius: 1rem;
+    width: 24.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+    bottom: 100px;
+    transition: 0.25s all ease;
+    transition-delay: 0.25s;
+  }
+
+  .share::after {
+    content: "";
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    bottom: -0.8rem;
+    left: 50%;
+    transform: rotate(45deg);
+    background-color: #48556a;
+  }
+
+  .arrow:hover ~ .share,
+  .arrow:active ~ .share,
+  .share:hover {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.25s all ease;
+    transition-delay: 0s;
+  }
 }
 
-/* .attribution {
+.attribution {
   font-size: 11px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-} */
+}
