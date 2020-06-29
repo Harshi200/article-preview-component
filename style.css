@@ -33,7 +33,7 @@ body {
   flex-direction: column;
 }
 
-article {
+main {
   border-radius: 1.5rem;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
@@ -183,7 +183,7 @@ a img:hover {
 }
 
 @media screen and (min-width: 875px) {
-  article {
+  main {
     display: flex;
     max-width: 73rem;
     height: 27.7rem;
