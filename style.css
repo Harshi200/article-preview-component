@@ -34,9 +34,6 @@ body {
 }
 
 main {
-  border-radius: 1.5rem;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
   max-width: 32.7rem;
 }
 
