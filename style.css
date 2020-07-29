@@ -37,7 +37,7 @@ main {
   max-width: 32.7rem;
 }
 
-figure {
+.image-container {
   background: url(/images/drawers.jpg);
   width: 100%;
   background-size: cover;
