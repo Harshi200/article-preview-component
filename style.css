@@ -130,9 +130,30 @@ time {
   padding: 0 3.2rem;
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
 
-  transition: 0.25s all ease;
-  transition-delay: 0.25s;
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .arrow:hover {
@@ -146,15 +167,6 @@ time {
 .arrow:hover img {
   filter: brightness(100);
   transition: none;
-}
-
-.arrow:hover ~ .share,
-.arrow:active ~ .share,
-.share:hover {
-  visibility: visible;
-  opacity: 1;
-  transition: 0.25s all ease;
-  transition-delay: 0s;
 }
 
 .share p {
@@ -186,7 +198,7 @@ a img:hover {
     height: 27.7rem;
   }
 
-  figure {
+  .image-container {
     flex: 1;
     border-bottom-left-radius: 1.5rem;
     border-top-right-radius: 0;
