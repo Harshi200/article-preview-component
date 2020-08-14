@@ -1,15 +1,12 @@
 # [Frontend Mentor](https://www.frontendmentor.io) - [Article preview component](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
 
-![Design preview for the Coding Bootcamp Testimonials Slider coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Article Preview Component coding challenge](./design/desktop-preview.jpg)
 
-<!-- ## Solution preview -->
+## [Solution preview](https://www.frontendmentor.io/solutions/pure-css-solution-with-hoveractive-effects-E10i_akhC)
 
-<!-- <p align="center">
-  <img src="images/bootcamp-slider-solution.gif">
-</p>
 <p align="center">
-   Solution preview by <a href="https://www.frontendmentor.io/solutions/mobilefirst-with-flexbox-and-oldfashioned-css-2woK6yE1s">Frontend Mentor</a>
-</p> -->
+  <img src="images/article-preview-solution.gif">
+</p>
 
 ## The challenge
 
@@ -26,4 +23,4 @@ User Stories:
 
 ## Technologies I used
 
-- CSS3, Flexbox, [Perfect Pixel](https://www.welldonecode.com/perfectpixel)
+- CSS3, Flexbox, Figma, [Perfect Pixel](https://www.welldonecode.com/perfectpixel)
